@@ -35,7 +35,7 @@ class CmsLink extends CmsActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'cms_menu_item';
+		return '{{cms_menu_item}}';
 	}
 
 	/**

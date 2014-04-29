@@ -11,6 +11,8 @@ Yii::import('cms.models.*');
 
 /**
  * Cms application component that allows for application-wide access to the cms.
+ *
+ * @property CmsBaseRenderer $renderer
  */
 class Cms extends CApplicationComponent
 {

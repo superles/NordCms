@@ -41,7 +41,7 @@ class CmsAttachment extends CmsActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'cms_attachment';
+		return '{{cms_attachment}}';
 	}
 
 	/**

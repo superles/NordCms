@@ -1,6 +1,6 @@
 <fieldset class="form-content">
 
-    <?php echo $form->textFieldRow($model,'['.$model->locale.']heading',array('class'=>'span8')) ?>
+    <?php echo $form->textField($model,'['.$model->locale.']heading',array('class'=>'span8')) ?>
 
     <div class="clearfix">
         <?php echo $form->labelEx($model,'['.$model->locale.']body') ?>
@@ -15,7 +15,7 @@
 		</div>
     </div>
 
-	<?php echo $form->textAreaRow($model,'['.$model->locale.']css',array('class'=>'span8','rows'=>6)) ?>
+	<?php echo $form->textArea($model,'['.$model->locale.']css',array('class'=>'span8','rows'=>6)) ?>
 
 </fieldset>
 
@@ -23,7 +23,7 @@
 
     <legend><?php echo Yii::t('CmsModule.core', 'Attachments') ?></legend>
 
-    <?php $this->widget('ext.bootstrap.widgets.BootGridView',array(
+    <?php $this->widget('ext.bootstrap.widgets.TbGridView',array(
         'id'=>'attachments_'.$model->locale,
         'dataProvider'=>$model->getAttachments(),
         'template'=>'{items} {pager}',
@@ -46,7 +46,7 @@
 				'sortable'=>false,
 			),
             array(
-                'class'=>'bootstrap.widgets.BootButtonColumn',
+                'class'=>'bootstrap.widgets.TbButtonColumn',
                 'template'=>'{delete}',
                 'buttons'=>array(
                     'delete'=>array(
@@ -57,7 +57,7 @@
         ),
     )) ?>
 
-    <?php echo $form->fileFieldRow($model,'['.$model->locale.']attachment') ?>
+    <?php echo $form->fileField($model,'['.$model->locale.']attachment') ?>
 
 </fieldset>
 
@@ -67,12 +67,12 @@
 
 		<legend><?php echo Yii::t('CmsModule.core','Page settings') ?></legend>
 
-		<?php echo $form->textFieldRow($model,'['.$model->locale.']url',array('class'=>'span8')) ?>
-		<?php echo $form->textFieldRow($model,'['.$model->locale.']pageTitle',array('class'=>'span8')) ?>
-		<?php echo $form->textFieldRow($model,'['.$model->locale.']breadcrumb',array('class'=>'span8')) ?>
-		<?php echo $form->textFieldRow($model,'['.$model->locale.']metaTitle',array('class'=>'span8')) ?>
-		<?php echo $form->textAreaRow($model,'['.$model->locale.']metaDescription',array('class'=>'span8','rows'=>3)) ?>
-		<?php echo $form->textFieldRow($model,'['.$model->locale.']metaKeywords',array('class'=>'span8')) ?>
+		<?php echo $form->textField($model,'['.$model->locale.']url',array('class'=>'span8')) ?>
+		<?php echo $form->textField($model,'['.$model->locale.']pageTitle',array('class'=>'span8')) ?>
+		<?php echo $form->textField($model,'['.$model->locale.']breadcrumb',array('class'=>'span8')) ?>
+		<?php echo $form->textField($model,'['.$model->locale.']metaTitle',array('class'=>'span8')) ?>
+		<?php echo $form->textArea($model,'['.$model->locale.']metaDescription',array('class'=>'span8','rows'=>3)) ?>
+		<?php echo $form->textField($model,'['.$model->locale.']metaKeywords',array('class'=>'span8')) ?>
 
 		<p><?php echo CHtml::link(Yii::t('CmsModule.core','View page'), $node->getUrl(), array('class'=>'btn')); ?></p>
 

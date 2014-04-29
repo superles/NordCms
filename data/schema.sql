@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS `cms_node` (
   `published` tinyint(1) NOT NULL DEFAULT '0',
   `deleted` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
-  KEY `name_deleted` (`name`,`deleted`)
+  KEY `name_deleted` (`name`,`deleted`),
   UNIQUE INDEX `name` (`name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

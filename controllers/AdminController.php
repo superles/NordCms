@@ -10,6 +10,9 @@
 
 class AdminController extends CmsController
 {
+    public function init(){
+        Yii::app()->theme = Yii::app()->getTheme();  //do some logic to load the desired theme
+    }
 	public function actionIndex()
 	{
 		$this->render('index');

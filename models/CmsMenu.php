@@ -36,7 +36,7 @@ class CmsMenu extends CmsActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'cms_menu';
+		return '{{cms_menu}}';
 	}
 
 	/**
