@@ -12,7 +12,7 @@ class NodeController extends CmsController
 	/**
 	 * @property string the default layout for the controller view
 	 */
-	public $layout = 'cms-column1';
+	public $layout = 'cms-column2';
 
 	/**
 	 * @property string the name of the default action
@@ -140,7 +140,6 @@ class NodeController extends CmsController
 	 */
 	public function actionPage($id)
 	{
-
 		$app = Yii::app();
 		$model = $this->loadModel($id);
 

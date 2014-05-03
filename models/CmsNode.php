@@ -49,7 +49,7 @@ class CmsNode extends CmsActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{cms_node}}';
+		return 'cms_node';
 	}
 
 	/**

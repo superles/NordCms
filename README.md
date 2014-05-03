@@ -28,6 +28,8 @@ Unzip the extension under protected/modules/cms and add the following to your ap
 
 ~~~
 [php]
+'language'          =>'en',
+	.....
 'imports'=>array(
 	.....
 	'application.modules.cms.CmsModule',
@@ -82,10 +84,7 @@ The cms application component supports the following configuration parameters:
 	// the application layout to use with the cms
 	'appLayout'=>'application.views.layouts.main',
 	// the name of the error flash message categories
-	'flashError'=>'error',
-	'flashInfo'=>'info',
-	'flashSuccess'=>'success',
-	'flashWarning'=>'warning',
+	
 ),
 ~~~
 

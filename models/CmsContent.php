@@ -45,7 +45,7 @@ class CmsContent extends CmsActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{cms_content}}';
+		return 'cms_content';
 	}
 
 	/**

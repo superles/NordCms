@@ -8,17 +8,17 @@
 
     <h1><?php echo Yii::t('CmsModule.core','Update :name',array(':name'=>ucfirst($model->name))) ?></h1>
 
-	<?php $form = $this->beginWidget('TbActiveForm',array(
+	<?php $form = $this->beginWidget('BootActiveForm',array(
 		'id'=>'cmsUpdateNodeForm',
 		'htmlOptions'=>array('enctype'=>'multipart/form-data'),
 	)) ?>
 
 		<fieldset class="form-node">
 
-			<?php echo $form->uneditableField($model,'name') ?>
-			<?php echo $form->dropDownList($model,'parentId',$model->getParentOptionTree()) ?>
-			<?php echo $form->inlineRadioButtonList($model,'level',$model->getLevelOptions()) ?>
-			<?php echo $form->checkBox($model,'published') ?>
+			<?php echo $form->uneditableRow($model,'name') ?>
+			<?php echo $form->dropDownListRow($model,'parentId',$model->getParentOptionTree()) ?>
+			<?php echo $form->radioButtonListInlineRow($model,'level',$model->getLevelOptions()) ?>
+			<?php echo $form->checkBoxRow($model,'published') ?>
 
 		</fieldset>
 
@@ -33,7 +33,7 @@
 			), true));
 		} ?>
 
-		<?php $this->widget('bootstrap.widgets.TbTabs',array(
+		<?php $this->widget('bootstrap.widgets.BootTabbable',array(
 			'tabs'=>$tabs,
 		)); ?>
 
