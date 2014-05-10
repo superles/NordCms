@@ -1,5 +1,5 @@
 {
-"name": "boo1ean/NordCms"
+"name": "boo1ean/NordCms",
     "autoload": {
         "classmap": [
             "components/"
